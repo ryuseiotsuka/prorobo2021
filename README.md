@@ -11,7 +11,7 @@ Q学習を利用し、迷路をスタートからゴールまで向かいます\
 
 
 ## 図の見方
-<img src="https://user-images.githubusercontent.com/50820803/148435468-e9dc8206-6866-4fc1-b21e-b2e4f52e9478.png" width=50%>\
+<img src="https://user-images.githubusercontent.com/50820803/148435468-e9dc8206-6866-4fc1-b21e-b2e4f52e9478.png" width=50%>
 
 黒：壁\
 赤：自分の位置\
