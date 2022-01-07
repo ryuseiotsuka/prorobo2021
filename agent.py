@@ -10,6 +10,7 @@
 # In[ ]:
 
 
+import math
 from map import Map 
 
 
@@ -57,14 +58,14 @@ class Agent(object):
             self.pos[0] -= 1
         else:
             pass
-    
+
     def get_state(self,_map):
         #右上から反時計回り
-        state = (self.goal_pos[0]-self.pos[0])*2**9+                (self.goal_pos[1]-self.pos[1])*2**8+                2**7*bool(_map[11-self.pos[0]+1][self.pos[1]+1])+                2**6*bool(_map[11-self.pos[0]+0][self.pos[1]+1])+                2**5*bool(_map[11-self.pos[0]-1][self.pos[1]+1])+                2**4*bool(_map[11-self.pos[0]-1][self.pos[1]+0])+                2**3*bool(_map[11-self.pos[0]-1][self.pos[1]-1])+                2**2*bool(_map[11-self.pos[0]+0][self.pos[1]-1])+                2**1*bool(_map[11-self.pos[0]+1][self.pos[1]-1])+                2**0*bool(_map[11-self.pos[0]+1][self.pos[1]+0])
+        state = (self.goal_pos[0]-self.pos[0])*10+(self.goal_pos[1]-self.pos[1])*2**8+        2**7*bool(_map[11-self.pos[0]+1][self.pos[1]+1])+        2**6*bool(_map[11-self.pos[0]+0][self.pos[1]+1])+        2**5*bool(_map[11-self.pos[0]-1][self.pos[1]+1])+        2**4*bool(_map[11-self.pos[0]-1][self.pos[1]+0])+        2**3*bool(_map[11-self.pos[0]-1][self.pos[1]-1])+        2**2*bool(_map[11-self.pos[0]+0][self.pos[1]-1])+        2**1*bool(_map[11-self.pos[0]+1][self.pos[1]-1])+        2**0*bool(_map[11-self.pos[0]+1][self.pos[1]+0])
         return state 
 
     def check_done(self):
-        if self.pos[0] == self.goal_pos[0] and            self.pos[1] == self.goal_pos[1]:
+        if self.pos[0] == self.goal_pos[0] and self.pos[1] == self.goal_pos[1]:
             done = True
         else: done = False
         return done
